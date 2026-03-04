@@ -1,0 +1,15 @@
+//2) Categorize Height (Taller, Average, Dwarf) 
+#include <stdio.h> 
+int main()  
+{ 
+float height; 
+printf("Enter height in cm: "); 
+scanf("%f", &height); 
+if (height < 150) 
+printf ("Category: Dwarf\n"); 
+else if (height >= 150 && height <= 170) 
+printf ("Category: Average\n"); 
+else 
+printf ("Category: Taller\n"); 
+return 0; 
+}
