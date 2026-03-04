@@ -1,0 +1,20 @@
+//4. Check Perfect Number (Using Function) 
+#include <stdio.h> 
+void checkPerfect(int num) { 
+int sum = 0; 
+for (int i = 1; i < num; i++) { 
+if (num % i == 0) 
+sum += i; 
+} 
+if (sum == num) 
+printf("Perfect Number\n"); 
+else 
+printf("Not a Perfect Number\n"); 
+} 
+int main() { 
+int num; 
+printf("Enter a number: "); 
+scanf("%d", &num); 
+checkPerfect(num); 
+return 0; 
+} 
