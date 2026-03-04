@@ -1,0 +1,11 @@
+//2) Set the 2nd bit of a number using bitwise OR 
+#include <stdio.h> 
+ int main() 
+ { 
+    int num, result; 
+    printf("Enter a number: "); 
+    scanf("%d", &num); 
+    result = num | (1 << 1);    
+    printf("Number after setting 2nd bit: %d\n", result); 
+    return 0; 
+} 
