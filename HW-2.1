@@ -1,0 +1,25 @@
+//1) Happy Number 
+#include <stdio.h> 
+int main()  
+{ 
+: 16-02-2026 
+int num, temp, sum, digit; 
+printf("Enter a number: "); 
+scanf("%d", &num); 
+temp = num; 
+while (temp != 1 && temp != 4) 
+{ 
+sum = 0; 
+while (temp > 0) { 
+digit = temp % 10; 
+sum += digit * digit; 
+temp /= 10; 
+} 
+temp = sum; 
+} 
+if (temp == 1) 
+printf("Happy Number\n"); 
+else 
+printf("Not a Happy Number\n"); 
+return 0; 
+}
