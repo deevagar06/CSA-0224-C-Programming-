@@ -1,0 +1,15 @@
+//4) Sum of all multiples of X up to limit 
+#include <stdio.h> 
+int main()  
+{ 
+int x, limit, i, sum = 0; 
+printf("Enter number (X): "); 
+scanf("%d", &x); 
+printf("Enter limit: "); 
+scanf("%d", &limit); 
+for(i = x; i <= limit; i += x) { 
+sum += i; 
+} 
+printf("Sum of multiples = %d\n", sum); 
+return 0; 
+}
