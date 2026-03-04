@@ -1,0 +1,14 @@
+//2. Multiplication Table from m to n (Using Function) 
+#include <stdio.h> 
+void printTable(int m, int n) { 
+for (int i = 1; i <= n; i++) { 
+printf("%d x %d = %d\n", m, i, m * i); 
+} 
+} 
+int main() { 
+int m, n; 
+printf("Enter number and limit: "); 
+scanf("%d %d", &m, &n); 
+printTable(m, n); 
+return 0; 
+} 
