@@ -1,0 +1,32 @@
+//4. Find Most Frequent Word in a Sentence 
+#include <stdio.h> 
+#include <string.h> 
+int main() { 
+char sentence[200], words[50][20]; 
+int count[50] = {0}; 
+int i = 0, j = 0, k = 0, max = 0, maxIndex = 0; 
+printf("Enter sentence:\n"); 
+getchar(); 
+fgets(sentence, sizeof(sentence), stdin); 
+// Split words 
+char *token = strtok(sentence, " \n"); 
+while(token != NULL) { 
+strcpy(words[i++], token); 
+token = strtok(NULL, " \n"); 
+} 
+int total = i; 
+for(i = 0; i < total; i++) { 
+for(j = i + 1; j < total; j++) { 
+if(strcmp(words[i], words[j]) == 0) 
+count[i]++; 
+} 
+} 
+for(i = 0; i < total; i++) { 
+if(count[i] > max) { 
+max = count[i]; 
+maxIndex = i; 
+} 
+} 
+printf("Most frequent word: %s\n", words[maxIndex]); 
+return 0; 
+}
