@@ -1,0 +1,27 @@
+//1. Remove the Middle Word in a Sentence 
+#include <stdio.h> 
+#include <string.h> 
+int main() { 
+char sentence[200]; 
+char words[50][20]; 
+int count = 0; 
+printf("Enter a sentence:\n"); 
+fgets(sentence, sizeof(sentence), stdin); 
+// Split sentence into words 
+char *token = strtok(sentence, " \n"); 
+while(token != NULL) { 
+strcpy(words[count++], token); 
+token = strtok(NULL, " \n"); 
+} 
+if(count == 0) { 
+printf("Empty sentence.\n"); 
+return 0; 
+} 
+int middle = count / 2;   // middle word index 
+printf("Sentence after removing middle word:\n"); 
+for(int i = 0; i < count; i++) { 
+if(i != middle) 
+printf("%s ", words[i]); 
+} 
+return 0; 
+}
